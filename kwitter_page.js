@@ -12,7 +12,7 @@ const firebaseConfig = {
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  
+
   user_name=localStorage.getItem("user_name");
   room_name=localStorage.getItem("room_name");
 
@@ -34,7 +34,7 @@ function getData() { firebase.database().ref("/"+room_name).on('value', function
 //End code
    } });  }); }
 getData();
-function log_out(){
+function logout(){
    localStorage.removeItem("user_name");
    localStorage.removeItem("room_name");
    window.location="index.html";
